@@ -3,9 +3,8 @@ import Card from './Card'
 function CardGallery() {
   return (
     <>
-      <h2>CardGallery</h2>
-      <p>Placeholder content</p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+      <div className=" text-xl mt-2">CardGallery</div>
+      <div className="flex flex-wrap gap-2">
         <Card />
         <Card />
         <Card />

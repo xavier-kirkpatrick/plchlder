@@ -1,11 +1,7 @@
 function Card() {
   return (
     <>
-      <div
-        style={{ border: '1px solid black', height: '300px', width: '100px' }}
-      >
-        A card
-      </div>
+      <div className=" border-2 rounded-md p-5 h-72 w-44 my-2">A card</div>
     </>
   )
 }

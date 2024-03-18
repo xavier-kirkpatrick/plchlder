@@ -1,11 +1,16 @@
 function FriendInput() {
   return (
     <>
-      <h2>FriendInput</h2>
+      <div className="text-xl mt-2">FriendInput</div>
       <label htmlFor="insta_url">
         Friend&apos;s Instagram url:
-        <input id="insta_url" name="insta_url" type="text" />
-        <button>Submit</button>
+        <input
+          className="border-2 ml-2 rounded-md p-2"
+          id="insta_url"
+          name="insta_url"
+          type="text"
+        />
+        <button className="border-2 ml-2 rounded-md p-2">Submit</button>
       </label>
     </>
   )

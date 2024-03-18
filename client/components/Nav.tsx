@@ -27,7 +27,7 @@ function Nav() {
           <NavButton onClick={handleSignIn}>Sign in</NavButton>
         </IfNotAuthenticated>
       </NavGroup>
-      <h1>Plchldr FTW!</h1>
+      <div className="text-2xl">Plchldr FTW!</div>
     </>
   )
 }
