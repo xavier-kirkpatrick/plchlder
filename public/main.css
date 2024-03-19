@@ -564,6 +564,18 @@ video {
   height: 18rem;
 }
 
+.h-\[525px\] {
+  height: 525px;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
 .w-44 {
   width: 11rem;
 }
@@ -578,6 +590,10 @@ video {
 
 .w-fit {
   width: fit-content;
+}
+
+.w-\[420px\] {
+  width: 420px;
 }
 
 .flex-row {
