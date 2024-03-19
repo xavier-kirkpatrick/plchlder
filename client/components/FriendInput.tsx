@@ -1,18 +1,26 @@
 function FriendInput() {
   return (
-    <>
-      <div className="text-xl mt-2">FriendInput</div>
-      <label htmlFor="insta_url">
-        Friend&apos;s Instagram url:
+    <div className="flex flex-col gap-2 mt-2">
+      <label htmlFor="friendName">
+        Friend&apos;s name:
         <input
-          className="border-2 ml-2 rounded-md p-2"
-          id="insta_url"
-          name="insta_url"
+          className="border-2 rounded-md ml-2"
+          id="friendName"
+          name="friendName"
           type="text"
         />
-        <button className="border-2 ml-2 rounded-md p-2">Submit</button>
       </label>
-    </>
+      <label htmlFor="instaUrl">
+        Friend&apos;s Instagram url:
+        <input
+          className="border-2 rounded-md ml-2"
+          id="instaUrl"
+          name="instaUrl"
+          type="text"
+        />
+      </label>
+      <button className="border-2 rounded-md w-fit px-2">Submit</button>
+    </div>
   )
 }
 
