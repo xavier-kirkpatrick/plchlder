@@ -7,10 +7,6 @@ interface Props {
   card: Card
 }
 
-// 420 x 525 = 0.8
-const maxh = 100
-const maxw = maxh*0.8
-
 function Card({ card }: Props) {
   return (
     <>
