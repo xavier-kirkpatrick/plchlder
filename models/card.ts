@@ -1,13 +1,13 @@
 export interface ICard {
-    id: number
-    imgUrl: string
+  id: number
+  imgUrl: string
 }
 
 export interface ICardData {
-    imgUrl: string
+  imgUrl: string
 }
 
 export interface ICardSnakeCase {
-    id?: number
-    imgUrl: string
+  id?: number
+  imgUrl: string
 }

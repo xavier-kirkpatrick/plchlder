@@ -1,4 +1,4 @@
-import { ICard } from "../../models/card"
+import { ICard } from '../../models/card'
 
 interface Props {
   card: ICard

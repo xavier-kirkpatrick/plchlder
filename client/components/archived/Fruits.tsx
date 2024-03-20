@@ -8,13 +8,13 @@ import { useFruits } from '../../fruitsHooks.ts'
 
 type FormState =
   | {
-    selectedFruit: Fruit
-    show: 'selected'
-  }
+      selectedFruit: Fruit
+      show: 'selected'
+    }
   | {
-    selectedFruit: null
-    show: 'add' | 'none'
-  }
+      selectedFruit: null
+      show: 'add' | 'none'
+    }
 
 function Fruits() {
   const [error, setError] = useState('')

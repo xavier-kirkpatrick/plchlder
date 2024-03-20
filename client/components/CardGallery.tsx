@@ -1,8 +1,7 @@
-import { useCards } from "../hooks"
-import Card from "./Card"
+import { useCards } from '../hooks'
+import Card from './Card'
 
 function CardGallery() {
-
   const cards = useCards()
 
   return (

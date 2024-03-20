@@ -4,13 +4,21 @@ import { ICard } from '../models/card.ts'
 const rootUrl = '/api/v1'
 
 const cardData: ICard[] = [
-  { id: 1, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-085.jpg' },
-  { id: 2, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-089.jpg' },
-  { id: 3, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-097.jpg' },
+  {
+    id: 1,
+    imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-085.jpg',
+  },
+  {
+    id: 2,
+    imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-089.jpg',
+  },
+  {
+    id: 3,
+    imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-097.jpg',
+  },
 ]
 
 export async function getCards(): Promise<ICard[]> {
-
   return cardData
   // return request
   //   .get(`${rootUrl}/fruits`)
