@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 
 import * as API from './api.ts'
 
-export function useFruits() {
+export function useCards() {
   const query = useQuery({
     queryKey: ['cards'],
     queryFn: API.getCards,
