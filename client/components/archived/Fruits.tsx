@@ -1,20 +1,20 @@
-import { Fruit, FruitData } from '../../models/fruit.ts'
+import { Fruit, FruitData } from '../../../models/fruit.ts'
 
 import { useState } from 'react'
 import SelectedFruitForm from './SelectedFruit.tsx'
 import AddFruitForm from './AddFruit.tsx'
-import { ErrorMessage } from './Styled.tsx'
-import { useFruits } from '../hooks.ts'
+import { ErrorMessage } from '../Styled.tsx'
+import { useFruits } from '../../fruitsHooks.ts'
 
 type FormState =
   | {
-      selectedFruit: Fruit
-      show: 'selected'
-    }
+    selectedFruit: Fruit
+    show: 'selected'
+  }
   | {
-      selectedFruit: null
-      show: 'add' | 'none'
-    }
+    selectedFruit: null
+    show: 'add' | 'none'
+  }
 
 function Fruits() {
   const [error, setError] = useState('')
