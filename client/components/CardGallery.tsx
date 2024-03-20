@@ -1,7 +1,8 @@
-import Card from './Card'
+import { ICard } from "../../models/card"
+import Card from "./Card"
 
 function CardGallery() {
-  const cardData: Card[] = [
+  const cardData: ICard[] = [
     { id: 1, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-085.jpg'},
     { id: 2, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-089.jpg'},
     { id: 3, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-097.jpg'},

@@ -1,10 +1,7 @@
-interface Card {
-  id: number
-  imgUrl: string
-}
+import { ICard } from "../../models/card"
 
 interface Props {
-  card: Card
+  card: ICard
 }
 
 function Card({ card }: Props) {
