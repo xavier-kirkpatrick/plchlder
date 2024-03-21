@@ -3,11 +3,28 @@ import { ICard } from '../models/card.ts'
 
 const rootUrl = '/api/v1'
 
-export async function getKeywords() {
+export async function getKeywords(username: string) {
+  // TODO: take insta username as param, return keywords from scraper
+
+  // const result = request
+  //   .get(`${rootUrl}/scrape?username=${username}`)
+  //   .then((res) => res.body.keywords)
+  //   .catch(logError)
+  // return result
+
+  // Mock data
   return ['space', 'dogs', 'chilli']
 }
 
-export async function getCards(): Promise<ICard[]> {
+export async function getCards(keywords: string): Promise<ICard[]> {
+  // take keywords as param, return card images
+
+  // return request
+  //   .get(`${rootUrl}/cards?keywords=${keywords}`)
+  //   .then((res) => res.body.imageUrls)
+  //   .catch(logError)
+
+  // Mock data
   const cardData: ICard[] = [
     {
       id: 1,
@@ -24,64 +41,7 @@ export async function getCards(): Promise<ICard[]> {
   ]
 
   return cardData
-  // return request
-  //   .get(`${rootUrl}/fruits`)
-  //   .then((res) => res.body.fruits)
-  //   .catch(logError)
 }
-
-// interface AddFruitFunction {
-//   fruit: FruitData
-//   token: string
-// }
-// export async function addFruit({
-//   fruit,
-//   token,
-// }: AddFruitFunction): Promise<Fruit> {
-//   await sleep(1500)
-
-//   return request
-//     .post(`${rootUrl}/fruits`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .send({ fruit })
-//     .then((res) => res.body.fruit)
-//     .catch(logError)
-// }
-
-// interface UpdateFruitFunction {
-//   fruit: Fruit
-//   token: string
-// }
-// export async function updateFruit({
-//   fruit,
-//   token,
-// }: UpdateFruitFunction): Promise<Fruit> {
-//   await sleep(1500)
-
-//   return request
-//     .put(`${rootUrl}/fruits/${fruit.id}`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .send({ fruit })
-//     .then((res) => res.body.fruit)
-//     .catch(logError)
-// }
-
-// interface DeleteFruitFunction {
-//   id: number
-//   token: string
-// }
-// export async function deleteFruit({
-//   id,
-//   token,
-// }: DeleteFruitFunction): Promise<void> {
-//   await sleep(1500)
-
-//   return request
-//     .delete(`${rootUrl}/fruits/${id}`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .then((res) => res.body)
-//     .catch(logError)
-// }
 
 function logError(err: Error) {
   console.log(err)

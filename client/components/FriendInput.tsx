@@ -2,12 +2,14 @@ import { useCards, useScraper } from '../hooks'
 
 function Keywords() {
   const scraper = useScraper()
-  return scraper.data &&
-    <>
-      <div className='text-xl mt-2 gap-2'>Keywords</div>
-      <div>{scraper.data?.join(', ')}</div>
-    </>
-
+  return (
+    scraper.data && (
+      <>
+        <div className="text-xl mt-2 gap-2">Keywords</div>
+        <div>{scraper.data?.join(', ')}</div>
+      </>
+    )
+  )
 }
 
 function FriendInput() {
