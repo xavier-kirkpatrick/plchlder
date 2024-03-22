@@ -4,16 +4,11 @@ import { ICard } from '../models/card.ts'
 const rootUrl = '/api/v1'
 
 export async function getKeywords(username: string) {
-  // TODO: take insta username as param, return keywords from scraper
-
-  // const result = request
-  //   .get(`${rootUrl}/scrape?username=${username}`)
-  //   .then((res) => res.body.keywords)
-  //   .catch(logError)
-  // return result
-
-  // Mock data
-  return ['space', 'dogs', 'chilli']
+  const result = request
+    .get(`${rootUrl}/keywords?username=${username}`)
+    .then((res) => res.body.keywords)
+    .catch(logError)
+  return result
 }
 
 export async function getCards(keywords: string): Promise<ICard[]> {

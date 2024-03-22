@@ -2,11 +2,12 @@ import { useCards, useScraper } from '../hooks'
 
 function Keywords() {
   const scraper = useScraper()
+  console.log(scraper)
   return (
     scraper.data && (
       <>
         <div className="text-xl mt-2 gap-2">Keywords</div>
-        <div>{scraper.data?.join(', ')}</div>
+        <div>{scraper.data.join(', ')}</div>
       </>
     )
   )
