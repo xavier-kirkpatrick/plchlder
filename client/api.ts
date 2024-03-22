@@ -3,73 +3,40 @@ import { ICard } from '../models/card.ts'
 
 const rootUrl = '/api/v1'
 
-const cardData: ICard[] = [
-  { id: 1, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-085.jpg' },
-  { id: 2, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-089.jpg' },
-  { id: 3, imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-097.jpg' },
-]
-
-export async function getCards(): Promise<ICard[]> {
-
-  return cardData
-  // return request
-  //   .get(`${rootUrl}/fruits`)
-  //   .then((res) => res.body.fruits)
-  //   .catch(logError)
+export async function getKeywords(username: string) {
+  const result = request
+    .get(`${rootUrl}/keywords?username=${username}`)
+    .then((res) => res.body.keywords)
+    .catch(logError)
+  return result
 }
 
-// interface AddFruitFunction {
-//   fruit: FruitData
-//   token: string
-// }
-// export async function addFruit({
-//   fruit,
-//   token,
-// }: AddFruitFunction): Promise<Fruit> {
-//   await sleep(1500)
+export async function getCards(keywords: string): Promise<ICard[]> {
+  // take keywords as param, return card images
 
-//   return request
-//     .post(`${rootUrl}/fruits`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .send({ fruit })
-//     .then((res) => res.body.fruit)
-//     .catch(logError)
-// }
+  // return request
+  //   .get(`${rootUrl}/cards?keywords=${keywords}`)
+  //   .then((res) => res.body.imageUrls)
+  //   .catch(logError)
 
-// interface UpdateFruitFunction {
-//   fruit: Fruit
-//   token: string
-// }
-// export async function updateFruit({
-//   fruit,
-//   token,
-// }: UpdateFruitFunction): Promise<Fruit> {
-//   await sleep(1500)
+  // Mock data
+  const cardData: ICard[] = [
+    {
+      id: 1,
+      imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-085.jpg',
+    },
+    {
+      id: 2,
+      imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-089.jpg',
+    },
+    {
+      id: 3,
+      imgUrl: 'https://threadheads.com/cdn/shop/files/GreetingCards-097.jpg',
+    },
+  ]
 
-//   return request
-//     .put(`${rootUrl}/fruits/${fruit.id}`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .send({ fruit })
-//     .then((res) => res.body.fruit)
-//     .catch(logError)
-// }
-
-// interface DeleteFruitFunction {
-//   id: number
-//   token: string
-// }
-// export async function deleteFruit({
-//   id,
-//   token,
-// }: DeleteFruitFunction): Promise<void> {
-//   await sleep(1500)
-
-//   return request
-//     .delete(`${rootUrl}/fruits/${id}`)
-//     .set('Authorization', `Bearer ${token}`)
-//     .then((res) => res.body)
-//     .catch(logError)
-// }
+  return cardData
+}
 
 function logError(err: Error) {
   console.log(err)

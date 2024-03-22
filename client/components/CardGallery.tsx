@@ -1,14 +1,13 @@
-import { useCards } from "../hooks"
-import Card from "./Card"
+import { useCards } from '../hooks'
+import Card from './Card'
 
 function CardGallery() {
-
   const cards = useCards()
 
   return (
     <>
       <div className=" text-xl mt-2">Card Gallery</div>
-      <div>Cards for eveyone</div>
+      <div>Cards for everyone</div>
       <div className="flex flex-wrap gap-2">
         {cards.data?.map((card) => {
           return <Card key={card.id} card={card} />
