@@ -21,6 +21,9 @@ router.get('/', async (req, res) => {
     // Parse scraped data through an LLM to convert to keywords
     const keywords = await parseToKeywords(profileData)
 
+    // Parse to description object to generate images with
+    // TODO: use parseToDescription()
+
     // mock returned keywords
     res.json({ keywords })
 

@@ -1,5 +1,3 @@
-// server/services/instagramService.ts
-
 /**
  * Scrapes the profile information for a user.
  * @param username - The username of the profile to scrape.
@@ -63,7 +61,8 @@ export function parseToKeywords(profileData: string[]) {
  * @param {string[]} keywords - An array of keywords to search for.
  * @return {Object} - An object containing ??
  */
-export function getPersonDescriptionData(keywords: string[]) {
+export function parseToDescription(keywords: string[]) {
+    console.log("Parsing: ", keywords)
 
     // TODO: replace mock data
     // Not sure what format we need it in to pass to the image generation API
