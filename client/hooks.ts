@@ -2,12 +2,11 @@ import { useQuery } from '@tanstack/react-query'
 
 import * as API from './api.ts'
 
-export function useScraper() {
-  const url = 'https://www.instagram.com/pooleypoo/'
+export function useScraper(username: string) {
 
   const query = useQuery({
     queryKey: ['scraper'],
-    queryFn: () => API.getKeywords(url),
+    queryFn: () => API.getKeywords(username),
   })
 
   return { ...query }

@@ -1,16 +1,18 @@
 import { useCards, useScraper } from '../hooks'
 
 function Keywords() {
-  const scraper = useScraper()
-  console.log(scraper)
+  const scraper = useScraper('pooleypoo')
+
   return (
-    scraper.data && (
-      <>
-        <div className="text-xl mt-2 gap-2">Keywords</div>
-        <div>{scraper.data.join(', ')}</div>
-      </>
-    )
-  )
+    <>
+      <div className="text-xl mt-2 gap-2">Keywords</div>
+      {scraper.isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <div>{scraper.data?.join(', ')}</div>
+      )}
+    </>
+  );
 }
 
 function FriendInput() {
