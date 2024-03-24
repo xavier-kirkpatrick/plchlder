@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query'
 import * as API from './api.ts'
 
 export function useScraper(username: string) {
-
   const query = useQuery({
     queryKey: ['scraper'],
     queryFn: () => API.getKeywords(username),

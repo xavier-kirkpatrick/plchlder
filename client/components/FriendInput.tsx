@@ -12,7 +12,7 @@ function Keywords() {
         <div>{scraper.data?.join(', ')}</div>
       )}
     </>
-  );
+  )
 }
 
 function FriendInput() {
