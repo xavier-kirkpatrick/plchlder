@@ -1,9 +1,6 @@
 import express from 'express'
-import {
-  parseToDescription,
-  parseToKeywords,
-  scrapeProfile,
-} from '../services/scraper'
+import { parseToKeywords, scrapeProfile } from '../services/scraper'
+import { parseToDescription } from '../services/cohere'
 // import { JwtRequest } from '../auth0.ts'
 
 const router = express.Router()
@@ -26,10 +23,10 @@ router.get('/', async (req, res) => {
     const keywords = await parseToKeywords(profileData)
 
     // Parse to description object to generate images with
-    const description = parseToDescription(keywords)
+    const description = await parseToDescription(keywords)
 
     // mock returned keywords
-    res.json({ keywords })
+    res.json({ keywords, description })
   } catch (error) {
     console.error(error)
     res.status(500).send('Something went wrong')

@@ -4,8 +4,6 @@
  * @returns An array of strings representing the scraped profile data.
  */
 export function scrapeProfile(username: string): string[] {
-  console.log('Scraping: ', username)
-
   // Return the scraped data
   // TODO: replace mock data
   return [
@@ -26,8 +24,6 @@ export function scrapeProfile(username: string): string[] {
  * @return {string[]} An array of keywords extracted from the profile data.
  */
 export function parseToKeywords(profileData: string[]) {
-  console.log('Parsing: ', profileData)
-
   // Return the keywords array
   // TODO: replace mock data
   return [
@@ -49,30 +45,4 @@ export function parseToKeywords(profileData: string[]) {
     'utes',
     'Chiang Mai',
   ]
-}
-
-/**
- * Retrieves person description data based on the provided keywords.
- *
- * @param {string[]} keywords - An array of keywords to search for.
- * @return {Object} - An object containing ??
- */
-export function parseToDescription(keywords: string[]) {
-  console.log('Parsing: ', keywords)
-
-  // TODO: replace mock data
-  // Not sure what format we need it in to pass to the image generation API
-  // TODO: Define an interface/type for the return data
-  return {
-    interests: ['Travel', 'Art', 'Culture', 'Adventure', 'Wildlife'],
-    traits: ['Art Enthusiast', 'Explorer', 'Culturally Curious', 'Adventurous'],
-    focusAreas: ['Street Art', 'Historical Landmarks', 'Wildlife Observation'],
-    regionsVisited: ['Southeast Asia', 'Thailand'],
-    noteworthyExperiences: [
-      'Exploring urban street art',
-      'Visiting significant temples and cultural sites',
-      'Adventurous excursions to caves and lookout points',
-      'Observing exotic wildlife',
-    ],
-  }
 }
