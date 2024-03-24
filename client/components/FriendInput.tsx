@@ -9,9 +9,9 @@ function Keywords() {
       ) : (
         <>
           <div className="text-2xl">Keywords</div>
-          <div>{JSON.stringify(scraper.data.keywords)}</div>
+          <div>{JSON.stringify(scraper.data?.keywords || 'Error')}</div>
           <div className="text-2xl">Description</div>
-          <div>{JSON.stringify(scraper.data.description)}</div>
+          <div>{JSON.stringify(scraper.data?.description || 'Error')}</div>
         </>
       )}
     </>

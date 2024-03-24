@@ -3,6 +3,10 @@ import { CohereClient } from 'cohere-ai'
 
 dotenv.config()
 
+if (!process.env.COHERE_API_KEY) {
+  throw new Error('Missing COHERE_API_KEY')
+}
+
 const cohere = new CohereClient({
   token: process.env.COHERE_API_KEY,
 })
