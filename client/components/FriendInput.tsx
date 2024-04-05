@@ -2,17 +2,20 @@ import { useCards, useScraper } from '../hooks'
 
 function Keywords() {
   const scraper = useScraper('pooleypoo')
-
   return (
     <>
-      <div className="text-xl mt-2 gap-2">Keywords</div>
       {scraper.isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div>{scraper.data?.join(', ')}</div>
+        <>
+          <div className="text-2xl">Keywords</div>
+          <div>{JSON.stringify(scraper.data?.keywords || 'Error')}</div>
+          <div className="text-2xl">Description</div>
+          <div>{JSON.stringify(scraper.data?.description || 'Error')}</div>
+        </>
       )}
     </>
-  );
+  )
 }
 
 function FriendInput() {

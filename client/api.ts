@@ -4,11 +4,8 @@ import { ICard } from '../models/card.ts'
 const rootUrl = '/api/v1'
 
 export async function getKeywords(username: string) {
-  const result = request
-    .get(`${rootUrl}/keywords?username=${username}`)
-    .then((res) => res.body.keywords)
-    .catch(logError)
-  return result
+  const result = await request.get(`${rootUrl}/keywords?username=${username}`)
+  return result.body
 }
 
 export async function getCards(keywords: string): Promise<ICard[]> {
