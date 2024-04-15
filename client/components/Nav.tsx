@@ -20,7 +20,12 @@ function Nav() {
     <>
       <NavGroup>
         <IfAuthenticated>
-          <NavButton onClick={handleSignOut}>Sign out</NavButton>
+          <NavButton
+            className="bg-ultra-blue text-white py-2 px-4 rounded transition-colors duration-300 ease-in-out hover:bg-ultra-blue-dark active:bg-ultra-blue-darker"
+            onClick={handleSignOut}
+          >
+            Sign out
+          </NavButton>
           {user && <p>Signed in as: {user?.nickname}</p>}
         </IfAuthenticated>
         <IfNotAuthenticated>

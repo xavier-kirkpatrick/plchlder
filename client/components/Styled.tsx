@@ -57,6 +57,4 @@ export const NavLink = styled(Link)`
   margin-right: 30px;
 `
 
-export const NavButton = styled.button`
-  margin-right: 30px;
-`
+export const NavButton = styled.button``
