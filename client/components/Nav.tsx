@@ -29,7 +29,12 @@ function Nav() {
           {user && <p>Signed in as: {user?.nickname}</p>}
         </IfAuthenticated>
         <IfNotAuthenticated>
-          <NavButton onClick={handleSignIn}>Sign in</NavButton>
+          <NavButton
+            className="bg-ultra-blue text-white py-2 px-4 rounded transition-colors duration-300 ease-in-out hover:bg-ultra-blue-dark active:bg-ultra-blue-darker"
+            onClick={handleSignIn}
+          >
+            Sign in
+          </NavButton>
         </IfNotAuthenticated>
       </NavGroup>
       <div className="text-2xl">Plchldr FTW!</div>
