@@ -31,6 +31,7 @@ function FriendInput() {
       <form className="flex flex-col gap-2 mt-2" onSubmit={handleSubmit}>
         <label htmlFor="friendName">
           Friend&apos;s name:
+          <br />
           <input
             className="border-2 rounded-md ml-2 px-1"
             id="friendName"
@@ -40,6 +41,7 @@ function FriendInput() {
         </label>
         <label htmlFor="instaUrl">
           Friend&apos;s Instagram url:
+          <br />
           <input
             className="border-2 rounded-md ml-2 px-1"
             id="instaUrl"
@@ -49,6 +51,7 @@ function FriendInput() {
         </label>
         <label htmlFor="occasion">
           Occasion:
+          <br />
           <input
             className="border-2 rounded-md ml-2 px-1"
             id="occasion"
