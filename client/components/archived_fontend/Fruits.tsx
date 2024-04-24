@@ -4,7 +4,7 @@ import { useState } from 'react'
 import SelectedFruitForm from './SelectedFruit.tsx'
 import AddFruitForm from './AddFruit.tsx'
 import { ErrorMessage } from '../Styled.tsx'
-import { useFruits } from '../../fruitsHooks.ts'
+import { useFruits } from './fruitsHooks.ts'
 
 type FormState =
   | {

@@ -1,4 +1,4 @@
-import { useCards } from '../hooks'
+import { useCards } from '../hooks/hooks'
 import Card from './Card'
 
 function CardGallery() {

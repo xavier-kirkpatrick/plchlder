@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { ICard } from '../models/card.ts'
+import { ICard } from '../../models/card.ts'
 
 const rootUrl = '/api/v1'
 

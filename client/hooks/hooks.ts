@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 
-import * as API from './api.ts'
+import * as API from '../api/api.ts'
 
 export function useScraper(username: string) {
   const query = useQuery({

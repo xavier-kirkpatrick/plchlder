@@ -1,4 +1,4 @@
-import { useCards, useScraper } from '../hooks'
+import { useCards, useScraper } from '../hooks/hooks'
 
 function Keywords() {
   const scraper = useScraper('pooleypoo')
