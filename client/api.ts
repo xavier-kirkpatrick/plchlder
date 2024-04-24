@@ -3,11 +3,13 @@ import { ICard } from '../models/card.ts'
 
 const rootUrl = '/api/v1'
 
+// getKeywords
 export async function getKeywords(username: string) {
   const result = await request.get(`${rootUrl}/keywords?username=${username}`)
   return result.body
 }
 
+// getCards currently renders three mock cards on the home page
 export async function getCards(keywords: string): Promise<ICard[]> {
   // take keywords as param, return card images
 

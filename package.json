@@ -36,6 +36,7 @@
     "express-jwt-authz": "^2.4.1",
     "jwks-rsa": "^2.1.5",
     "knex": "^2.5.1",
+    "openai": "^4.38.3",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {

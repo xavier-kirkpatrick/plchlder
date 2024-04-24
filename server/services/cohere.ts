@@ -11,19 +11,21 @@ const cohere = new CohereClient({
   token: process.env.COHERE_API_KEY,
 })
 
-const keywords = [
-  'streetart',
-  'final days',
-  'temple',
-  'Big Buddha',
-  'lookout',
-  'rescue',
-  'white temple',
-  'art project',
-  'red panda',
-  'monkey',
-  'utes',
-]
+/* Mock data NOT in use ATM */
+//----------------
+// const keywords = [
+//   'streetart',
+//   'final days',
+//   'temple',
+//   'Big Buddha',
+//   'lookout',
+//   'rescue',
+//   'white temple',
+//   'art project',
+//   'red panda',
+//   'monkey',
+//   'utes',
+// ]
 
 export async function parseToDescription(keywords: string[]) {
   const instructions =

@@ -2,6 +2,7 @@ import { useCards, useScraper } from '../hooks'
 
 function Keywords() {
   const scraper = useScraper('pooleypoo')
+
   return (
     <>
       {scraper.isLoading ? (
